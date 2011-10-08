@@ -32,3 +32,11 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Inc_Winwidth = 0
 let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
+
+
+" Django Snipmate
+autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType html set ft=htmldjango.html "For SnipMate
+
+" Symfony2 twig snipmate
+autocmd FileType twig set ft=twig.twig "For SnipMate
