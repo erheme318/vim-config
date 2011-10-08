@@ -1,0 +1,43 @@
+# Generic Tags
+snippet %
+	{% ${1} %}${2}
+snippet %%
+	{% ${1:tag_name} %}
+	${2}
+	{% end$1 %}
+snippet {
+	{{ ${1} }}${2}
+# Template Tags
+
+snippet block
+	{% block ${1} %}
+	${2}
+	{% endblock %}
+snippet #
+	{# ${1:comment} #}
+snippet comment
+	{% comment %}
+	${1}
+	{% endcomment %}
+snippet extends
+	{% extends "${1:base.html}" %}
+snippet filter
+	{% filter ${1} %}
+	${2}
+	{% endfilter %}
+snippet for
+	{% for ${1} in ${2} %}
+	${3}
+	{% endfor %}
+snippet empty
+	{% empty %}
+	${1}
+snippet if
+	{% if ${1} %}
+	${2}
+	{% endif %}
+snippet else
+	{% else %}
+	${1}
+snippet include
+	{% include "${1}" %}
