@@ -1,10 +1,25 @@
 silent map <F8> :SfSwitchView <CR>
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 map  <C-k> :tabn<CR>
-map  <C-h> :tabp<CR>
+map  <C-h> :tabp<CRr
 filetype on
 filetype plugin on
 colors desert
+
+" Dvorak: 'hjkl' change {2
+noremap d h
+noremap h j
+noremap t k
+noremap n l
+noremap j d
+noremap l n
+noremap L N
+
+" Window move {2
+nmap <leader>d <C-w><LEFT>
+nmap <leader>n <C-w><RIGHT>
+nmap <leader>t <C-w><UP>
+nmap <leader>h <C-w><DOWN>
 
 set noswapfile
 set et
@@ -21,6 +36,7 @@ let g:miniBufExplSplitBelow=1
 let g:miniBufExplVSplit = 30
 
 let g:NERDTreeWinSize = 30
+let NERDTreeMapOpenInTab='\t'
 
 set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
 let Tlist_Use_Horiz_Window=0
@@ -40,3 +56,4 @@ autocmd FileType html set ft=htmldjango.html "For SnipMate
 
 " Symfony2 twig snipmate
 autocmd FileType twig set ft=twig.twig "For SnipMate
+
