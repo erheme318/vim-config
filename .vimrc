@@ -15,6 +15,12 @@ noremap j d
 noremap l n
 noremap L N
 
+" for productivity
+noremap D 4<left>
+noremap H 4<down>
+noremap T 4<up>
+noremap N 4<right>
+
 " Window move {2
 nmap <leader>d <C-w><LEFT>
 nmap <leader>n <C-w><RIGHT>
