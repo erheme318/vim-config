@@ -4,7 +4,7 @@ map  <C-k> :tabn<CR>
 map  <C-h> :tabp<CRr
 filetype on
 filetype plugin on
-colors desert
+colors jellybeans 
 
 " Dvorak: 'hjkl' change {2
 noremap d h
@@ -34,6 +34,8 @@ set pastetoggle=<F2>
 set sw=2
 set sts=2
 set smarttab
+
+" miniBuffer config
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
@@ -41,8 +43,12 @@ let g:miniBufExplModSelTarget = 1
 let g:miniBufExplSplitBelow=1
 let g:miniBufExplVSplit = 30
 
+"NerdTree config
 let g:NERDTreeWinSize = 30
 let NERDTreeMapOpenInTab='\t'
+
+" toggle window
+map <F3> :TMiniBufExplorer<CR>
 
 set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
 let Tlist_Use_Horiz_Window=0
