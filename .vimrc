@@ -2,9 +2,18 @@ silent map <F8> :SfSwitchView <CR>
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 map  <C-k> :tabn<CR>
 map  <C-h> :tabp<CRr
+syntax on
 filetype on
 filetype plugin on
-colors jellybeans 
+colors desert256
+
+" 256 colors
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
+" git 72 character columns
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Dvorak: 'hjkl' change {2
 noremap d h
