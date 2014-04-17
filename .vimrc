@@ -1,14 +1,41 @@
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/syntastic'
+
+silent map <F8> :SfSwitchView <CR>
 silent map <F8> :SfSwitchView <CR>
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 map  <C-k> :tabn<CR>
 map  <C-h> :tabp<CRr
+
+" Colors
 syntax on
-filetype on
-filetype plugin on
 colors desert256
+set background=dark
+set number
+filetype plugin indent on
+
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+colorscheme solarized
 
 " 256 colors
-if $COLORTERM == 'gnome-terminal'
+if &term == 'xterm'
   set t_Co=256
 endif
 
@@ -30,12 +57,6 @@ noremap H 4<down>
 noremap T 4<up>
 noremap N 4<right>
 
-" Window move {2
-nmap <leader>d <C-w><LEFT>
-nmap <leader>n <C-w><RIGHT>
-nmap <leader>t <C-w><UP>
-nmap <leader>h <C-w><DOWN>
-
 set noswapfile
 set et
 set autoindent
@@ -54,10 +75,10 @@ let g:miniBufExplVSplit = 30
 
 "NerdTree config
 let g:NERDTreeWinSize = 30
-let NERDTreeMapOpenInTab='\t'
+let NERDTreeMapOpenInTab ='\t'
 
 " toggle window
-map <F3> :TMiniBufExplorer<CR>
+map <F3> :MBEToggle<CR>
 
 set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
 let Tlist_Use_Horiz_Window=0
@@ -69,12 +90,3 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Inc_Winwidth = 0
 let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
-
-
-" Django Snipmate
-autocmd FileType python set ft=python.django " For SnipMate
-autocmd FileType html set ft=htmldjango.html "For SnipMate
-
-" Symfony2 twig snipmate
-autocmd FileType twig set ft=twig.twig "For SnipMate
-
