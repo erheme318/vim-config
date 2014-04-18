@@ -5,7 +5,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
+Bundle 'spf13/vim-autoclose'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -72,6 +72,11 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplSplitBelow=1
 let g:miniBufExplVSplit = 30
+
+noremap <C-J>   <C-W>j
+noremap <C-K>   <C-W>k
+noremap <C-H>   <C-W>h
+noremap <C-L>   <C-W>l
 
 "NerdTree config
 let g:NERDTreeWinSize = 30
