@@ -1,19 +1,21 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'spf13/vim-autoclose'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'spf13/vim-autoclose'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'L9'
+Plugin 'vim-scripts/FuzzyFinder'
 
 " Colors
 syntax on
@@ -27,7 +29,11 @@ set sw=2
 set sts=2
 set smarttab
 filetype on
-colorscheme solarized
+colorscheme jellybeans
+
+" Search
+set incsearch
+set hlsearch
 
 " git 72 character columns
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -53,14 +59,6 @@ let g:mapleader = ','
 "NerdTree config
 let g:NERDTreeMapOpenInTab = '<C-S-t>'
 let g:NERDTreeMapOpenVSplit = 'a'
-
-" miniBuffer config
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplSplitBelow=1
-let g:miniBufExplVSplit = 30
 
 set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
 let Tlist_Use_Horiz_Window=0
