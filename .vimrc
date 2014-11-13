@@ -103,3 +103,11 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 "Buffer open
 nmap .t :bn<CR>
 nmap .h :bp<CR>
+
+"Fuzzy Finder
+nnoremap <silent> ob :FufBuffer<CR>
+nnoremap <silent> of :FufFile<CR>
+nnoremap <silent> od :FufDir<CR>
+nnoremap <silent> ot :FufTag<CR>
+nnoremap <silent> oC :FufChangeList<CR>
+nnoremap <silent> ol :FufLine<CR>
