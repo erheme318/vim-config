@@ -1,5 +1,9 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible             " be iMproved, required
+filetype off                 " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'gmarik/vundle'
 
@@ -17,19 +21,25 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'L9'
 Plugin 'vim-scripts/FuzzyFinder'
 
+" All the plugins must be added before the this line
+call vundle#end()             " required
+filetype plugin indent on     " required
+
 " Colors
 syntax on
 set background=dark
+colorscheme jellybeans
 set number
 set noswapfile
 set et
 set autoindent
+set smartindent
+set shiftwidth=4
 set pastetoggle=<F2>
-set sw=2
-set sts=2
+set sw=4   "shift width
+set sts=2  "soft tab stop
 set smarttab
-filetype on
-colorscheme jellybeans
+set encoding=utf-8
 
 " Search
 set incsearch
@@ -59,6 +69,7 @@ let g:mapleader = ','
 "NerdTree config
 let g:NERDTreeMapOpenInTab = '<C-S-t>'
 let g:NERDTreeMapOpenVSplit = 'a'
+nmap <silent> <c-n> :NERDTreeToggle<CR>
 
 set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
 let Tlist_Use_Horiz_Window=0
@@ -87,7 +98,7 @@ noremap j d
 noremap l n
 noremap L N
 
-" for productivity
+" For productivity
 noremap H 6<down>
 noremap T 6<up>
 
@@ -96,18 +107,17 @@ nmap <leader>d <C-w><LEFT>
 nmap <leader>n <C-w><RIGHT>
 nmap <leader>t <C-w><UP>
 nmap <leader>h <C-w><DOWN>
-
-nmap <silent> <c-n> :NERDTreeToggle<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
+set pastetoggle=<F2>
 
 "Buffer open
-nmap .t :bn<CR>
+nmap .n :bn<CR>
 nmap .h :bp<CR>
 
 "Fuzzy Finder
-nnoremap <silent> ob :FufBuffer<CR>
-nnoremap <silent> of :FufFile<CR>
-nnoremap <silent> od :FufDir<CR>
-nnoremap <silent> ot :FufTag<CR>
-nnoremap <silent> oC :FufChangeList<CR>
-nnoremap <silent> ol :FufLine<CR>
+nnoremap <silent> .b :FufBuffer<CR>
+nnoremap <silent> .f :FufFile<CR>
+nnoremap <silent> .d :FufDir<CR>
+nnoremap <silent> .t :FufTag<CR>
+nnoremap <silent> .C :FufChangeList<CR>
+nnoremap <silent> .l :FufLine<CR>
