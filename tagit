@@ -26,3 +26,6 @@ increment_patch
 
 # Print tagged version
 echo "Latest tag: $(get_last_tag)"
+
+# Push last tag to upstream branch
+git push upstream $(get_last_tag)
