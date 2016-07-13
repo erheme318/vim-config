@@ -7,7 +7,13 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle'
 
+" Navigation
 Plugin 'scrooloose/nerdtree'
+
+" Finder
+Plugin 'L9'
+Plugin 'vim-scripts/FuzzyFinder'
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'spf13/vim-autoclose'
 Plugin 'altercation/vim-colors-solarized'
@@ -18,17 +24,41 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'L9'
-Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'jceb/vim-orgmode'
+Plugin 'honza/vim-snippets'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-coverage'
+Plugin 'google/vim-glaive'
+
+" Lean & lightweight status/tabline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Color schema
+Plugin 'tomasr/molokai'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'vim-scripts/phd'
+
+" Tmux
+Plugin 'christoomey/vim-tmux-navigator'
+
+" Orgmode
+Plugin 'tpope/vim-speeddating'
 
 " All the plugins must be added before the this line
 call vundle#end()             " required
+call glaive#Install()
 filetype plugin indent on     " required
 
+" 256 colors
+set t_Co=256
+
 " Colors
-syntax on
+syntax on                                                  
 set background=dark
-colorscheme jellybeans
+colorscheme phd
 set number
 set noswapfile
 set et
@@ -58,12 +88,6 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
-
-" 256 colors
-if &term == 'xterm'
-  set t_Co=256
-endif
-
 let g:mapleader = ','
 
 "NerdTree config
@@ -121,3 +145,19 @@ nnoremap <silent> .d :FufDir<CR>
 nnoremap <silent> .t :FufTag<CR>
 nnoremap <silent> .C :FufChangeList<CR>
 nnoremap <silent> .l :FufLine<CR>
+
+" Orgmode
+let maplocalleader = 'k'
+
+" js beautify
+map <c-f> :call JsBeautify()<cr>
+autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+
+" Code coverage
+Glaive coverage plugin[mappings]
+
+" Allow Airline to use poweline fonts
+let g:airline_powerline_fonts = 1
+
+" Airline appears without window split
+set laststatus=2
