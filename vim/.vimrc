@@ -58,7 +58,7 @@ set t_Co=256
 " Colors
 syntax on                                                  
 set background=dark
-colorscheme phd
+colorscheme jellybeans
 set number
 set noswapfile
 set et
