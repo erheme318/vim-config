@@ -12,7 +12,6 @@ Plugin 'scrooloose/nerdtree'
 
 " Finder
 Plugin 'L9'
-Plugin 'vim-scripts/FuzzyFinder'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'spf13/vim-autoclose'
@@ -31,6 +30,7 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-coverage'
 Plugin 'google/vim-glaive'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Lean & lightweight status/tabline
 Plugin 'vim-airline/vim-airline'
@@ -137,14 +137,6 @@ set pastetoggle=<F2>
 "Buffer open
 nmap .n :bn<CR>
 nmap .h :bp<CR>
-
-"Fuzzy Finder
-nnoremap <silent> .b :FufBuffer<CR>
-nnoremap <silent> .f :FufFile<CR>
-nnoremap <silent> .d :FufDir<CR>
-nnoremap <silent> .t :FufTag<CR>
-nnoremap <silent> .C :FufChangeList<CR>
-nnoremap <silent> .l :FufLine<CR>
 
 " Orgmode
 let maplocalleader = 'k'
