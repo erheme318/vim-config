@@ -153,3 +153,7 @@ let g:airline_powerline_fonts = 1
 
 " Airline appears without window split
 set laststatus=2
+
+" CtrlP configurations
+" excluded directories
+set wildignore+=*/.git/*,*/vendor/*,*/cache/*,*/logs/*,*/i18n/*,*/node_modules/*,*/build/*
