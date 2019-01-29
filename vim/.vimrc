@@ -31,6 +31,8 @@ Plugin 'google/vim-maktaba'
 Plugin 'google/vim-coverage'
 Plugin 'google/vim-glaive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " Lean & lightweight status/tabline
 Plugin 'vim-airline/vim-airline'
