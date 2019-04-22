@@ -33,6 +33,7 @@ Plugin 'google/vim-glaive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'w0rp/ale'
 
 " Lean & lightweight status/tabline
 Plugin 'vim-airline/vim-airline'
