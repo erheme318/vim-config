@@ -32,7 +32,7 @@ Plugin 'google/vim-coverage'
 Plugin 'google/vim-glaive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'w0rp/ale'
 
 " Lean & lightweight status/tabline
