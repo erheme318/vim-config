@@ -98,6 +98,9 @@ let g:NERDTreeMapOpenInTab = '<C-S-t>'
 let g:NERDTreeMapOpenVSplit = 'a'
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 
+"Ale linting navigation
+nmap <silent> <c-b> <Plug>(ale_next_wrap)
+
 set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
 let Tlist_Use_Horiz_Window=0
 let Tlist_Use_Right_Window = 1
