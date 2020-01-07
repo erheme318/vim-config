@@ -8,7 +8,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Navigation
-Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
 
 " Finder
 Plugin 'L9'
@@ -33,7 +33,7 @@ Plugin 'google/vim-glaive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 
 " Lean & lightweight status/tabline
 Plugin 'vim-airline/vim-airline'
