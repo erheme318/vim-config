@@ -34,6 +34,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'dense-analysis/ale'
+Plugin 'hashivim/vim-terraform'
 
 " Lean & lightweight status/tabline
 Plugin 'vim-airline/vim-airline'
