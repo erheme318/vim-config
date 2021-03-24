@@ -101,6 +101,7 @@ nmap <silent> <c-n> :NERDTreeToggle<CR>
 
 "Ale linting navigation
 nmap <silent> <c-b> <Plug>(ale_next_wrap)
+let b:ale_linters = ['eslint']
 
 set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
 let Tlist_Use_Horiz_Window=0
@@ -163,4 +164,4 @@ set laststatus=2
 
 " CtrlP configurations
 " excluded directories
-set wildignore+=*/.git/*,*/vendor/*,*/cache/*,*/logs/*,*/i18n/*,*/node_modules/*,*/build/*
+set wildignore+=*/.git/*,*/vendor/*,*/cache/*,*/logs/*,*/i18n/*,*/node_modules/*,*/build/*,*/dist/*
