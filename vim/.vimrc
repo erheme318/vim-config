@@ -32,6 +32,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'dense-analysis/ale'
 Plugin 'hashivim/vim-terraform'
+Plugin 'leafgarland/typescript-vim'
 
 " Lean & lightweight status/tabline
 Plugin 'vim-airline/vim-airline'
@@ -48,6 +49,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Orgmode
 Plugin 'tpope/vim-speeddating'
 
+" Focus mode
+Plugin 'junegunn/goyo.vim'
+
 " All the plugins must be added before the this line
 call vundle#end()             " required
 call glaive#Install()
@@ -58,6 +62,10 @@ set t_Co=256
 
 " Colors
 syntax on                                                  
+
+" Use new regular expression engine
+set re=0
+
 set background=dark
 colorscheme jellybeans
 set number
@@ -65,8 +73,9 @@ set noswapfile
 set et
 set autoindent
 set smartindent
-set shiftwidth=4
+set shiftwidth=2
 set pastetoggle=<F2>
+
 set sw=4   "shift width
 set sts=2  "soft tab stop
 set smarttab
@@ -110,6 +119,7 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Inc_Winwidth = 0
 let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
+let Tlist_Ctags_Cmd="`brew --prefix`/bin/ctags"
 
 " Auto close
 let g:autoclose_vim_commentmode = 1
