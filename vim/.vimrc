@@ -76,7 +76,6 @@ set smartindent
 set shiftwidth=2
 set pastetoggle=<F2>
 
-set sw=4   "shift width
 set sts=2  "soft tab stop
 set smarttab
 set encoding=utf-8
@@ -119,7 +118,7 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Inc_Winwidth = 0
 let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
-let Tlist_Ctags_Cmd="`brew --prefix`/bin/ctags"
+""let Tlist_Ctags_Cmd="`brew --prefix`/bin/ctags"
 
 " Auto close
 let g:autoclose_vim_commentmode = 1
