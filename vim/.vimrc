@@ -34,6 +34,7 @@ Plugin 'dense-analysis/ale'
 Plugin 'hashivim/vim-terraform'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'github/copilot.vim'
+Plugin 'AndrewRadev/splitjoin.vim'
 
 " Lean & lightweight status/tabline
 Plugin 'vim-airline/vim-airline'
