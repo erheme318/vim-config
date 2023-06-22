@@ -1,5 +1,6 @@
 [core]
-    pager = delta
+  pager = delta
+  editor = nvim
 
 [delta]
     plus-style = "syntax #012800"
@@ -9,5 +10,8 @@
 
 [interactive]
     diffFilter = delta --color-only
+[user]
+	email = erkhem.gantulga@gmail.com
+	name = Erkhembayar Gantulga
 [diff]
     tool = vimdiff
