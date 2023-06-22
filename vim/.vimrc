@@ -36,6 +36,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'github/copilot.vim'
 Plugin 'AndrewRadev/splitjoin.vim'
 
+Plugin 'phaazon/hop.nvim'
+
 " Lean & lightweight status/tabline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -173,3 +175,6 @@ set laststatus=2
 " CtrlP configurations
 " excluded directories
 set wildignore+=*/.git/*,*/vendor/*,*/cache/*,*/logs/*,*/i18n/*,*/node_modules/*,*/build/*,*/dist/*
+
+" Hop keymap
+nmap ff :HopWord<CR>
